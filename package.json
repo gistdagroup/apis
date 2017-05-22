@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
+    "prod": "NODE_ENV=production node .",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
