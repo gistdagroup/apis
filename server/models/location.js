@@ -1,5 +1,7 @@
 'use strict';
 
-module.exports = function(Location) {
+const utils = require('../utils/utils')
 
+module.exports = function(Location) {
+  utils.setMethodsVisibility(Location, ['find'])
 };
