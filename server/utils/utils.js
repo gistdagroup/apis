@@ -12,3 +12,4 @@ module.exports.showMethodsVisibility = function (Model) {
     console.log(method.name + " : " + method.shared)
   });
 };
+

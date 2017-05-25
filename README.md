@@ -7,6 +7,7 @@
 - example https://github.com/strongloop/loopback-example-access-control
 - user management http://loopback.io/doc/en/lb3/Managing-users.html
 - query http://loopback.io/doc/en/lb3/Where-filter.html
+- before save https://loopback.io/doc/en/lb3/Operation-hooks.html#persist
 
 ## Mongo
 ### Indexing
@@ -34,4 +35,4 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{"email":"email","password":"password"}'
-```  
+```
