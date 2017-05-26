@@ -4,7 +4,7 @@ const moment = require('moment');
 const utils = require('../utils/utils');
 
 module.exports = function (Location) {
-  utils.setMethodsVisibility(Location, ['create', 'find']);
+  utils.setMethodsVisibility(Location, ['create', 'find', 'createChangeStream']);
 
   Location.observe('before save', function beforeSave(ctx, next) {
     if (ctx.instance) {
@@ -14,7 +14,6 @@ module.exports = function (Location) {
       } else {
         Device.findOne({where: {name: ctx.instance.uuid}}, function (err, device) {
           if (device) {
-            console.log(device)
             var vehical = device.vehical;
             ctx.instance.vehical = vehical;
           }

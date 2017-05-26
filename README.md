@@ -19,7 +19,7 @@ db.location.getIndexes()
 
 
 ## APIs
-- query location between date
+### query location between date
 ```
 http://0.0.0.0:3000/api/locations?[filter][where][date][between][0]=2017-06-22T16:52:46.000Z&[filter][where][date][between][1]=2017-06-22T16:52:49.000Z&[filter][where][vehical]=pae&access_token=X6CIg5o4SSjEz9UbR9A1SyyBlhtwVAdTlG1Rm6GSvboj5CCBYSBtj8FV0SahQxOE
 ```
@@ -28,7 +28,7 @@ or
 http://0.0.0.0:3000/api/locations?filter={"where":{"date":{"between":["2017-06-22T16:52:46.000Z","2017-06-22T16:52:48.000Z"]}}}&access_token=X6CIg5o4SSjEz9UbR9A1SyyBlhtwVAdTlG1Rm6GSvboj5CCBYSBtj8FV0SahQxOE
 ```
 
-- login
+### login
 ```
 curl -X POST \
   http://localhost:3000/api/users/login \
@@ -36,3 +36,18 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{"email":"email","password":"password"}'
 ```
+
+### Server send event
+see https://loopback.io/doc/en/lb3/Realtime-server-sent-events.html
+```
+curl -H Accept:text/event-stream "http://localhost:3000/api/locations/change-stream?_format=event-source&access_token=${token}"
+```
+client sample code
+ ```
+ var urlToChangeStream = '/api/MyModels/change-stream?_format=event-stream';
+ var src = new EventSource(urlToChangeStream);
+ src.addEventListener('data', function(msg) {
+   var data = JSON.parse(msg.data);
+   console.log(data); // the change object
+ });
+ ```
