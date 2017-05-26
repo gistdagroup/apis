@@ -40,7 +40,7 @@ curl -X POST \
 ### Server send event
 see https://loopback.io/doc/en/lb3/Realtime-server-sent-events.html
 ```
-curl -H Accept:text/event-stream "http://localhost:3000/api/locations/change-stream?_format=event-source&access_token=${token}"
+curl -H Accept:text/event-stream "http://localhost:3000/api/locations/change-stream?_format=event-source&access_token=${token}" --keepalive-time 2
 ```
 client sample code
  ```
