@@ -14,8 +14,8 @@ module.exports = function (Location) {
       } else {
         Device.findOne({where: {name: ctx.instance.uuid}}, function (err, device) {
           if (device) {
-            var vehical = device.vehical;
-            ctx.instance.vehical = vehical;
+            var vehicle = device.vehicle;
+            ctx.instance.vehicle = vehicle;
           }
           ctx.instance.hash = ctx.instance.uuid + '-' + moment(ctx.instance.date).format();
           next();

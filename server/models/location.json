@@ -22,7 +22,7 @@
       "type": "geopoint",
       "required": true
     },
-    "vehical": {
+    "vehicle": {
       "type": "string",
       "required": false
     },

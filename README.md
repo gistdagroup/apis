@@ -21,7 +21,7 @@ db.location.getIndexes()
 ## APIs
 ### query location between date
 ```
-http://0.0.0.0:3000/api/locations?[filter][where][date][between][0]=2017-06-22T16:52:46.000Z&[filter][where][date][between][1]=2017-06-22T16:52:49.000Z&[filter][where][vehical]=pae&access_token=X6CIg5o4SSjEz9UbR9A1SyyBlhtwVAdTlG1Rm6GSvboj5CCBYSBtj8FV0SahQxOE
+http://0.0.0.0:3000/api/locations?[filter][where][date][between][0]=2017-06-22T16:52:46.000Z&[filter][where][date][between][1]=2017-06-22T16:52:49.000Z&[filter][where][vehicle]=pae&access_token=X6CIg5o4SSjEz9UbR9A1SyyBlhtwVAdTlG1Rm6GSvboj5CCBYSBtj8FV0SahQxOE
 ```
 or
 ```

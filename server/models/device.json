@@ -11,7 +11,7 @@
       "type": "string",
       "required": true
     },
-    "vehical": {
+    "vehicle": {
       "type": "string",
       "required": true
     }
