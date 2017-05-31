@@ -12,6 +12,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "event-stream": "^3.3.4",
