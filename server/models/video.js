@@ -1,6 +1,8 @@
 'use strict';
+const utils = require('../utils/utils');
 
 module.exports = function (Video) {
+  utils.setMethodsVisibility(Video, ['create', 'find', 'findById', 'patchAttributes'])
 
   Video.observe('before save', function updateTimestamp(ctx, next) {
     if (ctx.instance) {

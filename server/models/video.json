@@ -15,17 +15,18 @@
     },
     "isFinish": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "createdAt": {
       "type": "date",
-      "defaultFn": "now",
-      "required": true
+      "required": true,
+      "defaultFn": "now"
     },
     "updatedAt": {
       "type": "date",
-      "defaultFn": "now",
-      "required": true
+      "required": true,
+      "defaultFn": "now"
     },
     "vehicle": {
       "type": "string",
@@ -34,6 +35,33 @@
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "patchAttributes"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
