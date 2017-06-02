@@ -1,0 +1,35 @@
+{
+  "name": "video",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "path": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string",
+      "required": true
+    },
+    "isFinish": {
+      "type": "boolean",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    },
+    "updatedAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
