@@ -37,6 +37,21 @@ curl -X POST \
   -d '{"email":"email","password":"password"}'
 ```
 
+### register
+```
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"email": "aaa%40aaa.com", "password":"aaa"}' 'http://0.0.0.0:3001/api/users?access_token=dO3qZzM6KBxHpNghr221hJqgaZld1zBFGZZuK7F0QYH5xRHip7t4PZFyLFnw3WzN'
+```
+
+### list user
+```
+curl -X GET --header 'Accept: application/json' 'http://0.0.0.0:3001/api/users?access_token=dO3qZzM6KBxHpNghr221hJqgaZld1zBFGZZuK7F0QYH5xRHip7t4PZFyLFnw3WzN'
+```
+
+### delete user
+```
+curl -X DELETE --header 'Accept: application/json' 'http://0.0.0.0:3001/api/users/592ea9efe36f062fa72baf08?access_token=dO3qZzM6KBxHpNghr221hJqgaZld1zBFGZZuK7F0QYH5xRHip7t4PZFyLFnw3WzN'
+```
+
 ### Server send event
 see https://loopback.io/doc/en/lb3/Realtime-server-sent-events.html
 ```
