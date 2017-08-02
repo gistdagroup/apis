@@ -26,8 +26,7 @@
       "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "admin",
-      "permission": "ALLOW",
-      "property": "create"
+      "permission": "ALLOW"
     }
   ],
   "methods": {}
