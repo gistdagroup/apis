@@ -7,8 +7,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node .",
-    "prod": "NODE_ENV=production node .",
+    "start": "DEBUG=loopback:security:* node .",
+    "prod": "NODE_ENV=production DEBUG=loopback:security:* node .",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
